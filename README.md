@@ -29,3 +29,4 @@ THEN I am presented with a responsive layout that adapts to my viewport
 <img width="518" alt="READMESS2.png" src="READMESS2.png">
 
 ### Here's the link to the deployed Webpage:
+https://elisadefa.github.io/FullStack_EliDefa_ProfessionalPortfolio/
