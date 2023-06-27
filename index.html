@@ -3,66 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Pseudo Elements</title>
+    <title>eliDefaProffesionalPortafolio</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1>CSS</h1>
+      <h1>Eli</h1>
       <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Resources</a></li>
+        <h4></h4> <!--This is set on style css-->
+      </nav>
+      <nav>
+        <ul> <!--Setting functionality of header links to webpage sections-->
+          <li><a href="#about-eli">About Me</a></li>
+          <li><a href="#static-website">Static Website</a></li>
+          <li><a href="#prework-website">Prework Study Guide</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <section>
+        <aside class="backgroundColor">
+            <img src="./assets/images/ElisaDesfassiaux_2023_51.jpg" alt="Foto of Eli" 
+            width="300" height="450" alignment="center"/>
+        </aside>
+    <section>
         <article>
-          <h2>Pseudo Elements</h2>
-          <div>
-            <p>
-              We can do some cool stuff with the pseudo elements ::before and
-              ::after. For every element on the page, we basically get two more!
-              Let's try a few here.
-            </p>
-            <h3>Header</h3>
-            <p>
-              Notice the header above? If you look at our 'index.html' file, the
-              header text is simply "CSS". But using the pseudo element ::after
-              on the header, we added the words "Pseudo Elements" and gave it a
-              different font and color.
-            </p>
-            <h3>H3 headings</h3>
-            <p>
-              Notice the h3 headings? Using the pseudo element ::before, we added
-              an asterisk before each of the h3 headings.
-            </p>
-            <h3>Nav Items</h3>
-            <p>
-              Notice the navbar items? Using both ::before and ::after pseudo
-              elements on the navbar items, we added red symbols around each
-              one.
-            </p>
-          </div>
+            <div>
+                <h2 id="about-eli" class="about-eli">About Me</h2>
+                <p>
+                    Eli demonstrates success in management, project execution, and customer engagement. Their skills as a problem-solver and conﬂict resolution specialist make them highly eﬀective in developing and mentoring teams. They focus on delivering customer excellence through continued engagement and fostering eﬀective communications with engineering teams, stakeholders, and client executives. By balancing policy, people, process, and technology, project outcomes exceed expectations.
+                </p>
+            <div>
+                <h3 id="static-website">Static Website</h3>
+                <button> <!--Setting button functionality to redirect to actual live webpage when clicked on photo-->
+                    <a href="https://elisadefa.github.io/HW1-Refactored/">
+                    <img id="static" src="./assets/images/StaticWebsite.png"
+                    alt="place holder static Website" 
+                    class="squareContainer"/>
+                </a>
+                </button>
+            <div>
+                <h5 id="prework-website">Prework Study Guide Website</h5>
+                <button>
+                    <a href="https://elisadefa.github.io/prework-study-guide/">
+                    <img id="static" src="./assets/images/PreworkWebsite.png"
+                    alt="place holder static Website" 
+                    class="squareContainer"/>
+                </a>
+                </button>
+            </div>
+            </div>
         </article>
-      </section>
-      <aside>
-        <h2>Sign up to Learn More!</h2>
+    </section>
+      <aside class="rightBar">
+        <h2 id="contact-me">Get a Quote!</h2>
         <form>
           <input type="text" placeholder="E-mail address" />
           <button>Submit</button>
         </form>
       </aside>
     </main>
-
     <footer>
-      <span>Thanks for visiting!</span>
+        Desfassiaux Inc. 2023
     </footer>
   </body>
 </html>

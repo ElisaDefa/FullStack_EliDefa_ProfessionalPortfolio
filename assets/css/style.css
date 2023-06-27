@@ -1,55 +1,109 @@
+/* Creating custom properties accessible to all other CSS */
+:root {
+    --red: #6A1C0F;
+    --gold: #BD9865;
+    --neonBlack: #121313;
+    --white: rgba(255, 255, 255, 0.951);
+}
 body {
     display: flex;
     flex-direction: column;
-    line-height: 1.3;
+    line-height: 1.5;
   }
   
-  header {
-    display: flex;
+  header { 
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding: 1%;
-    background-color: #13293d;
-    color: #fff;
+    margin: 0%;   
+    background-color: var(--neonBlack); /*Using previously created variables(properties) */
+    color: var(--gold);
+  }
+
+  /* Adding background color for styling webpages */
+  .backgroundColor {
+    background-color: var(--red);
+  }
+
+  /* Adding justify to the text */
+  p {
+    text-align: justify;
+    padding-left: 5%;
+    padding-top: 0%;
+  }
+
+  /* Adding padding to fit button */
+  .squareContainer {
+    padding: 5px;
+    width: 575px;
+  }
+
+/* hoover effect with greyscales to make image grey when mouse is over it */
+  #static:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+/* hoover effect with gold color to change font color */
+  div:hover {
+    color: var(--gold);
   }
   
   h1 {
     font-size: 200%;
+    border: 0;
+
+  }
+
+  h4::after {
+    color: var(--gold);
+    content: '(They/Them)';
+    align-content: left;
   }
   
-  /* Added the rest of the header text */
+  /* Added the rest of the header text in different color & size */
   h1::after {
-    font-family: Impact;
-    content: 'Pseudo Elements';
-    color: #8ac4ff;
-    margin-left: 5px;
+    content: 'Desfassiaux ';
+    color: var(--red);
+    margin: 5px;
+    
   }
   
   h2 {
-    margin: 2% 0;
-    font-size: 180%;
+    margin-top: 0%;
+    font-size: 300%;
+    padding-left: 5%;
+
   }
   
   h3 {
     margin: 2% 0;
+    font-size: 200%;
+    padding-left: 5%;
+    text-emphasis-style: none;
+  }
+
+  h5 {
+    margin: 2% 0;
     font-size: 150%;
+    padding-left: 5%;
+    text-emphasis-style: none;
   }
   
-  /* Added asterisk before every h3 heading */
+  /* Added fire emoji before every h3 heading */
   h3::before {
     font-family: Impact;
-    content: '\273A';
-    color: #772014;
+    content: '\01F525';
     margin-right: 5px;
   }
   
-  /* Added symbols before and after the nav links */
-  nav li::before,
+  /* Added japanesse symbols after the nav links */
   nav li::after {
-    content: '\2766';
-    color: #8ac4ff;
-    padding: 1%;
+    content: ' \3299';
+    color: var(--gold);
+    padding: 0%;
     font-family: cursive;
+    font-size: 20px;
   }
   
   nav ul {
@@ -59,13 +113,15 @@ body {
   }
   
   nav a {
-    color: #b9C6ae;
+    color: var(--gold);
     font-weight: bold;
+    font-size: 20px;
     text-decoration: none;
   }
   
+  /* Added hover color change on nav links */  
   nav a:hover {
-    color: #fff;
+    color: var(--red);
   }
   
   main {
@@ -80,8 +136,10 @@ body {
     padding-right: 5%;
   }
   
+  /* Added borders for styling of webpage */   
   article {
-    border-bottom: 1px solid #d8a47f;
+    border-top: 10px solid var(--red);
+    border-bottom: 10px solid var(--red);
   }
   
   article p {
@@ -92,6 +150,7 @@ body {
   article ul {
     margin-left: 5%;
     margin-bottom: 2%;
+    margin-top: 2%;
     font-size: 110%;
     list-style: circle;
   }
@@ -115,21 +174,32 @@ body {
     display: flex;
     justify-content: center;
     padding: 2%;
-    background-color: #13293d;
-    color: #fff;
+    background-color: var(--neonBlack);
+    color: var(--white);
   }
   
   @media screen and (max-width: 768px) {
-    header, main {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
       flex-direction: column;
     }
-  
-    section {
-      padding-right: 0;
+    /* Make the sidebar stack in top the body */
+    .backgroundColor {
+      order: 0;
     }
-  
-    aside {
-      width: 100%;
-      text-align: center;
+    /* Make the sidebar stack in the bottom the body */
+    .rightBar {
+        order: 1;
+      }
+    /* Change the header background */
+    header {
+      background: var(--white);
+    }
+    /* Change the navbar and footer background */
+    nav,
+    footer {
+      background-color: var(--white);
     }
   }
+  
